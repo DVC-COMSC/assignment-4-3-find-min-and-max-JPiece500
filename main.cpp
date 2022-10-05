@@ -4,43 +4,47 @@
 // cin >> num1 >> num2 >> num3;
 // Find the min and max among three values.
 // Display the numbers with ascending order ( min, other, max).
-
 #include <iostream>
 using namespace std;
+
 int main()
 {
-        const double RATE2 = 1.10;
-        const double RATE6 = 2.20;
-        const double RATE10 = 3.70;
-        const double RATE20 = 4.80;
-        double weight, distance, dRate, price;
+	int num1, num2, num3;
+	int min, max, other;
 
-        cout << "Enter the package weight and distance\n";
-        cin >> weight >> distance;
-        //? Input Validation
-        if ((weight < 0) && (weight > 20))
-        {
-                cout << "The package weight must be a positive number and less than 20.\n";
-                exit(0);
-        }
+	cin >> num1 >> num2 >> num3;
 
-        if (weight < 2)
-                dRate = RATE2;
-        else if (weight < 6)
-                dRate = RATE6;
-        else if (weight < 10)
-                dRate = RATE10;
-        else if (weight <= 20)
-                dRate = RATE20;
-        else
-        {
-                cout << "The weight must be less than 20\n";
-                exit(0);
-        }
-
-        if (distance < 500)
-                price = dRate;
-        else
-                price = (distance / 500.0) * dRate;
-        cout << "The shipping price for package is " << price << endl;
-}
+	if (num1 > num2)
+	{
+		if ( num2 < num3)
+			min = num2; 
+		else // num2 >= num3
+			min =   num3;
+	}
+	else // num1 <= num2
+	{
+		if (num1 < num3)
+			min = num1;
+		else // num >= num1
+			min = num3;
+	}
+	//To find max
+	if (num1 > num2)
+	{
+		if ( num1 >  num3)
+			max = num1;
+		else // num1 <= num3
+			max = num3;
+	}
+	else // num1 <= num2
+	{
+		if (num2 < num3)
+			max = num3;
+		else // num >= num1
+			max = num2;
+	}
+		
+	cout << "max : " << max << endl;
+	cout << "min: "  << min << endl; 
+		
+} 
