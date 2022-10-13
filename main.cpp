@@ -6,45 +6,49 @@
 // Display the numbers with ascending order ( min, other, max).
 #include <iostream>
 using namespace std;
+int main() {
+int a, b, c;
+int max, min, mid;
+  cin >> a >> b >> c;
 
-int main()
-{
-	int num1, num2, num3;
-	int min, max, other;
-
-	cin >> num1 >> num2 >> num3;
-
-	if (num1 > num2)
-	{
-		if ( num2 < num3)
-			min = num2; 
-		else // num2 >= num3
-			min =   num3;
-	}
-	else // num1 <= num2
-	{
-		if (num1 < num3)
-			min = num1;
-		else // num >= num1
-			min = num3;
-	}
-	//To find max
-	if (num1 > num2)
-	{
-		if ( num1 >  num3)
-			max = num1;
-		else // num1 <= num3
-			max = num3;
-	}
-	else // num1 <= num2
-	{
-		if (num2 < num3)
-			max = num3;
-		else // num >= num1
-			max = num2;
-	}
-		
-	cout << "max : " << max << endl;
-	cout << "min: "  << min << endl; 
-		
-} 
+if ((a > b) && (a > c)) { 
+max = a;
+  if (b > c) { 
+    mid = b;
+    min = c;
+    }
+  else {
+    mid = c;
+    min = b;
+  }
+}
+  
+else if ((b > a) && (b > c)) { 
+max = b;
+  if (a > c){
+    mid = a;
+    min = c;
+  }
+  else {
+    mid = c;
+    min = a;
+  }
+}
+  
+else { 
+  max = c; 
+  if (a > b) {
+    mid = a;
+    min = c;
+  }
+  else {
+    mid = c;
+    min = a; 
+  }
+  
+}
+cout << "MAX: " << max << endl;
+cout << "MID: " << mid << endl;
+cout << "MIN: " << min << endl;
+  return (0);
+}
