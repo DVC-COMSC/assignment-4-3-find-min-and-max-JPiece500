@@ -39,11 +39,11 @@ else {
   max = c; 
   if (a > b) {
     mid = a;
-    min = c;
+    min = b;
   }
   else {
     mid = c;
-    min = a; 
+    min = b; 
   }
   
 }
