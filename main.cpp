@@ -42,10 +42,9 @@ else {
     min = b;
   }
   else {
-    mid = c;
+    mid = a;
     min = b; 
   }
-  
 }
 cout << "MIN: " << min << endl;
 cout << "MID: " << mid << endl;
