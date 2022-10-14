@@ -47,8 +47,8 @@ else {
   }
   
 }
-cout << "MAX: " << max << endl;
-cout << "MID: " << mid << endl;
 cout << "MIN: " << min << endl;
+cout << "MID: " << mid << endl;
+cout << "MAX: " << max << endl;
   return (0);
 }
